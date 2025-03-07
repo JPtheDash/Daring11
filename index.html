@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daring 11</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,11 +21,11 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 320px;
+            width: 300px;
         }
 
         h1 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             font-size: 2rem;
             color: #333;
         }
@@ -37,59 +36,32 @@
             color: #666;
         }
 
-        .google-login-box {
-            margin-top: 1.5rem;
-            padding: 1rem;
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
+            border-radius: 4px;
+            font-size: 1rem;
         }
 
-        .g_id_signin {
-            display: inline-block;
-            margin: 0 auto;
+        button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
         }
 
-        .register-link {
+        button:hover {
+            background-color: #1557b0;
+        }
+
+        .social-buttons {
             margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: #555;
         }
 
-        .register-link a {
-            color: #1a73e8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .register-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="login-box">
-        <h1>Daring 11</h1>
-        <p class="tagline">Dare to Dream</p>
-        
-        <!-- Google Sign-In Box -->
-        <div class="google-login-box">
-            <div id="g_id_onload"
-                 data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
-                 data-callback="handleCredentialResponse">
-            </div>
-            <div class="g_id_signin" data-type="icon" data-size="medium" data-theme="filled_blue"></div>
-        </div>
-
-        <p class="register-link">Don't have an account? <a href="#">Register</a> / <a href="#">Login</a> to start playing!</p>
-    </div>
-
-    <script>
-        function handleCredentialResponse(response) {
-            // Handle the login response
-            console.log("ID Token: " + response.credential);
-            // Decode the JWT token to get user info (you can use a library like jwt-decode)
-        }
-    </script>
-</body>
-</html>
+        .social
