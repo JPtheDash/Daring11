@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Daring 11</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         body {
@@ -26,24 +26,48 @@
         }
 
         h1 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
             color: #333;
+        }
+
+        .tagline {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #666;
         }
 
         .g_id_signin {
             margin-top: 1rem;
         }
+
+        .register-link {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .register-link a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="login-box">
-        <h1>Login with Gmail</h1>
+        <h1>Daring 11</h1>
+        <p class="tagline">Dare to Dream</p>
         <div id="g_id_onload"
              data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
              data-callback="handleCredentialResponse">
         </div>
         <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
+        <p class="register-link">Don't have an account? <a href="#">Register</a> / <a href="#">Login</a> to start playing!</p>
     </div>
 
     <script>
