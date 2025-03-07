@@ -22,7 +22,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 300px;
+            width: 320px;
         }
 
         h1 {
@@ -37,8 +37,17 @@
             color: #666;
         }
 
+        .google-login-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
         .g_id_signin {
-            margin-top: 1rem;
+            display: inline-block;
+            margin: 0 auto;
         }
 
         .register-link {
@@ -62,11 +71,16 @@
     <div class="login-box">
         <h1>Daring 11</h1>
         <p class="tagline">Dare to Dream</p>
-        <div id="g_id_onload"
-             data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
-             data-callback="handleCredentialResponse">
+        
+        <!-- Google Sign-In Box -->
+        <div class="google-login-box">
+            <div id="g_id_onload"
+                 data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="icon" data-size="medium" data-theme="filled_blue"></div>
         </div>
-        <div class="g_id_signin" data-type="standard" data-theme="filled_blue"></div>
+
         <p class="register-link">Don't have an account? <a href="#">Register</a> / <a href="#">Login</a> to start playing!</p>
     </div>
 
