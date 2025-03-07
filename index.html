@@ -64,4 +64,67 @@
             margin-top: 1.5rem;
         }
 
-        .social
+        .social-buttons button {
+            background-color: #25d366; /* WhatsApp green */
+            margin-bottom: 0.5rem;
+        }
+
+        .social-buttons button.telegram {
+            background-color: #0088cc; /* Telegram blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Daring 11</h1>
+        <p class="tagline">Dare to Dream</p>
+
+        <!-- Sign-In Form -->
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons">
+            <button onclick="connectWhatsApp1()">Connect WhatsApp 1</button>
+            <button onclick="connectWhatsApp2()">Connect WhatsApp 2</button>
+            <button class="telegram" onclick="connectTelegram()">Connect Telegram</button>
+        </div>
+    </div>
+
+    <script>
+        // Handle Sign-In
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Test credentials
+            if (username === 'test123' && password === 'test123') {
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+
+        // Placeholder functions for social buttons
+        function connectWhatsApp1() {
+            alert('Connect WhatsApp 1 clicked!');
+            // Add functionality later
+        }
+
+        function connectWhatsApp2() {
+            alert('Connect WhatsApp 2 clicked!');
+            // Add functionality later
+        }
+
+        function connectTelegram() {
+            alert('Connect Telegram clicked!');
+            // Add functionality later
+        }
+    </script>
+</body>
+</html>
